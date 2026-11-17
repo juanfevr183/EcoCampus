@@ -3,44 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="EcoCampus: orientación inteligente para separar residuos en el campus.">
-<title>EcoCampus | Separa mejor</title>
+<meta name="description" content="EcoCampus AI: propuesta de inteligencia artificial e IoT para orientar la separación de residuos en el campus.">
+<meta name="theme-color" content="#176b52">
+<title>EcoCampus AI | Separa mejor</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="topbar">
   <a class="brand" href="#inicio"><span class="brand-mark">E</span> EcoCampus <b>AI</b></a>
-  <nav><a href="#problema">El problema</a><a href="#solucion">La solución</a><a href="#impacto">Impacto</a><a href="#equipo">Equipo</a></nav>
+  <nav aria-label="Navegación principal">
+    <a href="#problema">Problema</a><a href="#solucion">Solución</a><a href="#arquitectura">Arquitectura</a><a href="#factibilidad">Factibilidad</a><a href="#etica">Ética</a><a href="#tecnologias">IoT</a><a href="#abstract">Abstract</a><a href="#equipo">Equipo</a>
+  </nav>
 </header>
 <main>
 <section class="hero" id="inicio">
   <div class="hero-copy">
     <p class="eyebrow">TECNOLOGÍA PARA UN CAMPUS MÁS SOSTENIBLE</p>
     <h1>Separa mejor.<br><em>Aprovecha más.</em></h1>
-    <p>Una propuesta de inteligencia artificial que ayuda a identificar residuos y promueve mejores hábitos de separación.</p>
+    <p>EcoCampus AI es una propuesta de inteligencia artificial que orienta la clasificación de residuos y ayuda a identificar puntos de recolección que necesitan atención.</p>
     <a class="cta" href="#demo">Probar demostración <span>→</span></a>
   </div>
-  <div class="hero-art" aria-label="Ilustración conceptual de reciclaje">
-    <div class="orb">♻</div><div class="floating-card">IA <small>Visión por computador</small></div>
-    <div class="leaf leaf-one">✦</div><div class="leaf leaf-two">✧</div>
-  </div>
+  <div class="hero-art" aria-label="Ilustración conceptual de reciclaje"><div class="orb">♻</div><div class="floating-card">IA <small>Visión por computador</small></div><div class="leaf leaf-one">✦</div><div class="leaf leaf-two">✧</div></div>
 </section>
 <section class="stats">
-  <div><strong>3</strong><span>categorías orientativas</span></div>
-  <div><strong>1</strong><span>comunidad universitaria</span></div>
-  <div><strong>0</strong><span>rostros necesarios</span></div>
+  <div><strong>3</strong><span>categorías orientativas</span></div><div><strong>1</strong><span>comunidad universitaria</span></div><div><strong>0</strong><span>rostros necesarios</span></div>
 </section>
 <section class="section two-col" id="problema">
-  <div><p class="eyebrow">01 / EL PROBLEMA</p><h2>Un pequeño error<br>cambia todo el proceso.</h2></div>
-  <div><p>Cuando un residuo se deposita en el contenedor equivocado, puede contaminar materiales aprovechables. Además, los puntos de recolección llenos pueden pasar inadvertidos entre revisiones.</p><p>EcoCampus AI busca orientar a estudiantes, docentes y visitantes con información clara y facilitar el reporte de contenedores que necesitan atención.</p></div>
+  <div><p class="eyebrow">01 / FORMULACIÓN DEL PROBLEMA</p><h2>Un pequeño error cambia todo el proceso.</h2></div>
+  <div>
+    <p>En la universidad se generan residuos aprovechables, orgánicos y no aprovechables. Algunas personas no identifican el contenedor correcto y, durante los momentos de alta circulación, ciertos puntos pueden llenarse antes de que el personal de servicios generales los revise. Esto puede contaminar materiales reciclables, generar malos olores y dificultar la recolección.</p>
+    <p><strong>Relevancia social y económica:</strong> una separación más clara puede favorecer el aprovechamiento de materiales, mejorar el orden del campus y apoyar el trabajo del personal encargado.</p>
+    <div class="info-box"><strong>Alcance del proyecto</strong><p>Prototipo académico para orientar la clasificación de residuos y recibir reportes voluntarios de contenedores llenos en un conjunto limitado de puntos del campus. No reemplaza las rutas institucionales ni pretende gestionar los residuos de toda la ciudad.</p></div>
+  </div>
 </section>
 <section class="solution" id="solucion">
-  <div class="section-heading"><p class="eyebrow">02 / NUESTRA SOLUCIÓN</p><h2>La IA como guía,<br>las personas como decisión final.</h2></div>
+  <div class="section-heading"><p class="eyebrow">02 / NUESTRA SOLUCIÓN</p><h2>La IA como guía,<br>las personas como decisión final.</h2><p class="section-intro">La persona selecciona o fotografía un residuo. El sistema propuesto analiza la imagen, estima una categoría y muestra una recomendación con un nivel de confianza. Si la imagen es confusa o el residuo está mezclado, solicita verificación humana.</p></div>
   <div class="steps">
     <article><span>01</span><h3>Captura</h3><p>El usuario selecciona o fotografía el residuo desde su celular.</p></article>
-    <article><span>02</span><h3>Analiza</h3><p>Un modelo de visión por computador estima la categoría del objeto.</p></article>
-    <article><span>03</span><h3>Orienta</h3><p>La interfaz muestra una sugerencia y advierte si se requiere revisión humana.</p></article>
+    <article><span>02</span><h3>Analiza</h3><p>Un modelo de visión por computador estima si es aprovechable, orgánico o no aprovechable.</p></article>
+    <article><span>03</span><h3>Orienta</h3><p>La interfaz muestra una sugerencia y advierte cuando se requiere revisión humana.</p></article>
   </div>
+  <div class="alternatives">
+    <h3>Alternativas tecnológicas evaluadas</h3>
+    <div class="alternative-grid">
+      <div><b>A · Chatbot</b><p>Bajo costo y fácil actualización; depende de que el usuario describa correctamente el residuo.</p></div>
+      <div class="chosen"><b>B · Clasificador de imágenes</b><p>Seleccionado: ofrece orientación visual y puede prototiparse sin instalar equipos en todos los contenedores.</p></div>
+      <div><b>C · Sensores IoT</b><p>Ayudan a priorizar la recolección, pero requieren hardware, conectividad e instalación.</p></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="arquitectura">
+  <div class="section-heading"><p class="eyebrow">03 / ARQUITECTURA DEL SISTEMA</p><h2>De la fotografía a una recomendación.</h2><p>Arquitectura cliente-servidor propuesta para una futura implementación funcional.</p></div>
+  <div class="architecture" role="img" aria-label="Diagrama: usuario y navegador, conexión HTTPS, backend Python, modelo de visión artificial y base de datos de reportes">
+    <div class="arch-node"><span>01</span><b>Hardware / cliente</b><p>Celular o computador con cámara y navegador web.</p></div><div class="arch-arrow">↓ HTTPS</div>
+    <div class="arch-node"><span>02</span><b>Software / frontend</b><p>HTML, CSS y JavaScript; interfaz adaptable y accesible.</p></div><div class="arch-arrow">↓ Solicitud segura</div>
+    <div class="arch-node"><span>03</span><b>Backend</b><p>Servidor Python con Flask o FastAPI para recibir y procesar solicitudes.</p></div><div class="arch-arrow">↓ Imagen</div>
+    <div class="arch-node"><span>04</span><b>Modelo de IA</b><p>Visión por computador entrenada con imágenes etiquetadas; devuelve categoría y confianza.</p></div><div class="arch-arrow">↓ Resultado</div>
+    <div class="arch-node"><span>05</span><b>Datos y respuesta</b><p>Base de datos mínima para reportes agregados de contenedores; la interfaz muestra la orientación.</p></div>
+  </div>
+  <div class="two-col architecture-notes">
+    <div><h3>Hardware</h3><p>Dispositivo del usuario, cámara y conexión a internet. En la fase inicial no se requieren sensores instalados en los contenedores.</p></div>
+    <div><h3>Software</h3><p>Frontend web, backend Python, comunicación HTTPS y almacenamiento mínimo de reportes.</p></div>
+    <div><h3>Modelo de IA</h3><p>Clasificador de imágenes con tres categorías generales. Debe entrenarse y validarse con ejemplos representativos del campus.</p></div>
+    <div><h3>Decisiones de diseño</h3><p>La web funciona desde teléfonos; el procesamiento en servidor facilita actualizar el modelo. Se eligió el clasificador por responder directamente a la duda de clasificación y evitar, inicialmente, el costo de desplegar sensores en todos los puntos.</p></div>
+  </div>
+  <p class="note">La página actual es una demostración navegable. No envía fotografías a un servidor ni ejecuta un modelo de IA entrenado.</p>
+</section>
+<section class="section feasibility" id="factibilidad">
+  <div class="section-heading"><p class="eyebrow">04 / ANÁLISIS DE FACTIBILIDAD</p><h2>Un prototipo escalable por etapas.</h2></div>
+  <div class="fact-grid">
+    <article><h3>Recursos computacionales</h3><ul><li><b>Cliente:</b> teléfono o computador con navegador y cámara.</li><li><b>Red:</b> conexión a internet y HTTPS para enviar imágenes.</li><li><b>Servidor:</b> instancia capaz de ejecutar el backend Python.</li><li><b>IA:</b> almacenamiento para el modelo y capacidad de procesamiento acorde al volumen de imágenes; una GPU podría evaluarse si el modelo y la demanda lo requieren.</li><li><b>Datos:</b> base de datos pequeña para reportes agregados.</li></ul></article>
+    <article><h3>Costos por contemplar</h3><ul><li>Alojamiento web y servidor de backend.</li><li>Almacenamiento, transferencia de datos y copias de seguridad.</li><li>Entrenamiento, validación y actualización del modelo.</li><li>Desarrollo, soporte, mantenimiento y pruebas.</li><li>En una fase IoT: compra, instalación, energía y mantenimiento de sensores.</li></ul><p class="note">No se asignan valores monetarios porque dependen del proveedor, el tráfico, el modelo y el número de contenedores. Deben cotizarse antes de un piloto real.</p></article>
+  </div>
+  <h3 class="subheading">Métricas para evaluar el proyecto</h3>
+  <div class="metrics-grid"><div><b>Exactitud por categoría</b><span>Desempeño para cada tipo de residuo.</span></div><div><b>Matriz de confusión</b><span>Errores y confusiones entre categorías.</span></div><div><b>Tiempo de respuesta</b><span>Tiempo desde el envío hasta la recomendación.</span></div><div><b>Revisión humana</b><span>Porcentaje de casos de baja confianza.</span></div><div><b>Usabilidad</b><span>Pruebas con estudiantes y personal del campus.</span></div><div><b>Reportes</b><span>Cantidad y utilidad de reportes de contenedores llenos.</span></div></div>
 </section>
 <section class="demo section" id="demo">
   <div><p class="eyebrow">DEMOSTRACIÓN INTERACTIVA</p><h2>¿Dónde debería ir?</h2><p>Selecciona un residuo para ver una recomendación ilustrativa.</p></div>
@@ -49,15 +85,37 @@
     <select id="waste"><option value="plastic">Botella plástica limpia</option><option value="paper">Papel limpio y seco</option><option value="food">Cáscaras de fruta</option><option value="dirty">Empaque sucio o mezclado</option></select>
     <button id="classify">Consultar recomendación</button>
     <div class="result" id="result" aria-live="polite">La recomendación aparecerá aquí.</div>
-    <small>Esta es una demostración de interfaz. No ejecuta un modelo de IA real.</small>
+    <small>Esta es una demostración basada en reglas predefinidas. No ejecuta un modelo de IA real. Sigue siempre las indicaciones oficiales de tu institución.</small>
   </div>
 </section>
 <section class="section two-col" id="impacto">
-  <div><p class="eyebrow">03 / IMPACTO ESPERADO</p><h2>Mejores decisiones,<br>mejor información.</h2></div>
-  <div><ul class="impact-list"><li>Orientar la separación de residuos.</li><li>Reducir errores que contaminan materiales aprovechables.</li><li>Facilitar reportes de contenedores llenos.</li><li>Evaluar resultados con pruebas de clasificación y usabilidad.</li></ul><p class="note">Estos son objetivos del proyecto; su impacto deberá medirse mediante pruebas piloto.</p></div>
+  <div><p class="eyebrow">05 / IMPACTO ESPERADO</p><h2>Mejores decisiones, mejor información.</h2></div>
+  <div><ul class="impact-list"><li>Orientar la separación de residuos.</li><li>Reducir errores que contaminan materiales aprovechables.</li><li>Facilitar reportes de contenedores llenos.</li><li>Apoyar la organización de revisiones del personal.</li><li>Evaluar resultados con pruebas de clasificación y usabilidad.</li></ul><p class="note">Estos son objetivos del proyecto; no son resultados demostrados. Su impacto deberá medirse mediante pruebas piloto.</p></div>
 </section>
-<section class="team" id="equipo"><p class="eyebrow">04 / EQUIPO DESARROLLADOR</p><h2>Una idea que empieza en el campus.</h2><p>Proyecto académico de IA, Diseño y Tecnología.</p><p class="team-name">Integrantes: Juan Felipe Vargas Rubiano</p></section>
+<section class="solution ethics" id="etica">
+  <div class="section-heading"><p class="eyebrow">06 / MARCO ÉTICO Y LEGAL</p><h2>La tecnología debe cuidar a las personas.</h2></div>
+  <div class="ethics-grid">
+    <article><h3>Privacidad</h3><p>Evitar capturar rostros y datos personales. Procesar únicamente la imagen necesaria para clasificar el residuo y eliminarla o anonimizarla según la política institucional.</p></article>
+    <article><h3>Sesgos y errores</h3><p>Las imágenes pueden variar por iluminación, ángulo, suciedad o mezcla de materiales. El modelo debe probarse con ejemplos diversos y advertir cuando su confianza sea baja.</p></article>
+    <article><h3>Transparencia</h3><p>Informar que la recomendación es una ayuda, no una decisión definitiva. Explicar limitaciones y permitir la verificación por parte del usuario o del personal.</p></article>
+    <article><h3>Responsabilidad</h3><p>La IA no reemplaza las normas de separación ni el criterio del personal de servicios generales. Los reportes deben ser voluntarios y usados solo para el propósito informado.</p></article>
+  </div>
+  <div class="legal-note"><b>Referente legal colombiano:</b> la Ley 1581 de 2012 establece disposiciones generales para la protección de datos personales y el marco de Habeas Data. Si la solución llega a tratar datos personales, la institución deberá definir finalidad, autorización cuando corresponda, medidas de seguridad, conservación y atención de derechos de los titulares. La implementación debe revisarse con las políticas y asesoría jurídica institucional; esta sección es informativa y no constituye concepto legal.</div>
+</section>
+<section class="section emerging" id="tecnologias">
+  <div class="section-heading"><p class="eyebrow">07 / TECNOLOGÍAS EMERGENTES</p><h2>Una futura integración con Internet de las Cosas (IoT).</h2><p>La IA puede complementarse con sensores de nivel instalados en contenedores estratégicos.</p></div>
+  <div class="iot-flow"><div><span>1</span><b>Sensor IoT</b><p>Mide el nivel de llenado del contenedor.</p></div><div class="flow-arrow">→</div><div><span>2</span><b>Conectividad</b><p>Envía la medición a una plataforma mediante una red disponible.</p></div><div class="flow-arrow">→</div><div><span>3</span><b>Panel de gestión</b><p>Organiza alertas y ayuda a priorizar revisiones.</p></div></div>
+  <p>La integración sería sinérgica: el clasificador orientaría a las personas sobre dónde depositar cada residuo, mientras los sensores IoT informarían qué contenedores requieren atención. Así se combinarían prevención de errores y mejor planificación de la recolección. Esta integración es una propuesta futura: no está instalada ni operativa en el prototipo actual.</p>
+</section>
+<section class="section abstract" id="abstract">
+  <div class="section-heading"><p class="eyebrow">08 / DIVULGACIÓN CIENTÍFICA</p><h2>Technical Abstract</h2><p>EcoCampus AI: A Web-Based Artificial Intelligence Proposal for Campus Waste Sorting</p></div>
+  <div class="abstract-card">
+    <p>Improper waste separation in university environments can contaminate recyclable materials, increase handling costs, and reduce the effectiveness of waste recovery programs. This project presents EcoCampus AI, a conceptual web-based system designed to support waste sorting and improve communication between campus users and waste management staff. The proposed methodology combines a responsive web interface with a computer vision model that analyzes an image captured by a user and estimates whether an item is recyclable, organic, or non-recyclable. The system is designed to return a suggested category and a confidence level, while requesting human verification when an image is unclear or an item contains mixed materials. Its proposed client-server architecture includes a mobile browser, an HTTPS connection, a Python backend, an image-classification model, and a minimal database for aggregated reports about full containers. Three alternatives were considered: a rule-based chatbot, an image classifier, and Internet of Things fill-level sensors. The image-classification approach was selected because it directly addresses users’ uncertainty and can be prototyped without installing hardware throughout the campus. A future IoT integration could complement classification by notifying staff when selected containers approach capacity. The prototype is a decision-support concept, not a validated autonomous system. Its expected impact will be assessed through per-class accuracy, confusion matrices, response time, usability tests, and the rate of cases requiring human review. Privacy, transparency, and institutional waste-sorting guidelines remain essential to responsible deployment.</p>
+    <p class="keywords"><b>Keywords:</b> artificial intelligence; computer vision; waste sorting; web application; Internet of Things; sustainability.</p>
+  </div>
+</section>
+<section class="team" id="equipo"><p class="eyebrow">09 / EQUIPO DESARROLLADOR</p><h2>Una idea que empieza en el campus.</h2><p>Proyecto académico de IA, Diseño y Tecnología.</p><p class="team-name">Integrantes: ______________________________</p><p class="team-name">Universidad Sergio Arboleda · Proyecto final de semestre</p></section>
 </main>
-<footer><span>EcoCampus </span><span>Propuesta académica · IA, Diseño y Tecnología</span></footer>
+<footer><span>EcoCampus AI</span><span>Propuesta académica · IA, Diseño y Tecnología</span><a href="#inicio">Volver arriba ↑</a></footer>
 <script src="script.js"></script>
 </body></html>
